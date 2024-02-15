@@ -1,0 +1,20 @@
+Welcome roll number 
+<h2>Discussions</h2>
+
+<% for(var i=0;i<as.length;i++) { %>
+<p> <%=as[i]._id %> : <%=as[i].answer %></a></p>
+
+<% } %>
+
+
+
+
+<hr>
+<h2>Add Your Response</h2>
+
+<form action="add_answer">
+    Answer: <input type="text" name="answer" required>
+    <input type="hidden" name="qid" value="<%=qid %>">
+    <input type="submit">
+</form>
+

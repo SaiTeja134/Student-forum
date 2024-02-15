@@ -1,0 +1,18 @@
+Welcome roll number <%=result[0].fullname %>
+<h2>Discussions</h2>
+
+<% for(var i=0;i<qs.length;i++) { %>
+<p><a href='answers?_id=<%=qs[i]._id %>'  target="_blank"><%=qs[i]._id %> : <%=qs[i].question %></a></p>
+
+<% } %>
+
+
+
+
+<hr>
+<h2>Create question</h2>
+
+<form action="insert_question">
+    Question: <input type="text" name="question" required>
+    <input type="submit">
+</form>
